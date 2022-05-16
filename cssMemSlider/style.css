@@ -1,15 +1,121 @@
 /* git commit -m "init: <message> `LANG=en_EN date +'(%a, %b %d, %Y %r)'`" */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #24292d;
+}
+
+.header {
+  text-align: center;
+  font-size: 0;
+}
+
 .slider {
   width: 80vw;
   height: 90vh;
   overflow: hidden;
-  margin: 0 auto;
-  background-color: gray;
+  margin: 50px auto;
+  border: 10px solid #24292d;
   border-radius: 10px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  position: absolute;
+  bottom: 65px;
+  right: 15%;
+}
+
+.btn {
+  width: 5px;
+  height: 5px;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: black;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.btn:hover {
+  background-color: whitesmoke;
+  box-shadow: 0 0 2px 0 rgba(49, 47, 47, 0.8);
+  opacity: 0.7;
+}
+
+input[name="slide"] {
+  visibility: hidden;
+}
+
+.slider__list {
+  width: 1000%;
+  height: 100%;
+  display: flex;
+  transition: all .5s ease;
 }
 
 .slider__item {
+  width: 10%;
+}
+
   width: 100%;
   height: auto;
+
+figcaption {
+  color: whitesmoke;
+}
+
+#slide1:checked ~ .slider__list {
+  margin-left: 0;
+}
+
+#slide1:checked~.slider__controls label[for="slide1"] {
+  box-shadow: 0 10px 20px -5px rgba(255, 255, 255, 0.75);
+  color: whitesmoke;
+  background-color: whitesmoke;
+}
+
+#slide2:checked ~ .slider__list {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slider__list {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slider__list {
+  margin-left: -300%;
+}
+
+#slide5:checked ~ .slider__list {
+  margin-left: -400%;
+}
+
+#slide6:checked ~ .slider__list {
+  margin-left: -500%;
+}
+
+#slide7:checked ~ .slider__list {
+  margin-left: -600%;
+}
+
+#slide8:checked ~ .slider__list {
+  margin-left: -700%;
+}
+
+#slide9:checked ~ .slider__list {
+  margin-left: -800%;
+}
+
+#slide10:checked ~ .slider__list {
+  margin-left: -900%;
 }
