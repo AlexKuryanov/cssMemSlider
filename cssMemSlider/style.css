@@ -67,8 +67,15 @@ input[name="slide"] {
   width: 10%;
 }
 
-  width: 100%;
-  height: auto;
+.item__inner {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slider__pic {
+  height: 70vh;
+}
 
 figcaption {
   color: whitesmoke;
