@@ -98,4 +98,14 @@ figcaption {
   border-radius: 50%;
   margin: 0 0 0.5rem 0;
   position: relative;
+  transition: all 0.3s linear;
+}
+
+.slider__nav-link:hover {
+  background: rgb(241, 218, 100);
+}
+
+.slider__nav-link:focus,
+.slider__nav-link:active {
+  background: rgb(175, 162, 98);
 }
