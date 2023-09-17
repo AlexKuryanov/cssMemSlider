@@ -15,6 +15,8 @@ body {
 }
 
 .slider {
+  display: flex;
+  /* align-items: center; */
   width: 80vw;
   height: 90vh;
   overflow: hidden;
@@ -43,7 +45,13 @@ body {
   background-color: black;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+  background-color: #fff;
 }
 
 .btn:hover {
@@ -60,7 +68,7 @@ input[name="slide"] {
   width: 1000%;
   height: 100%;
   display: flex;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .slider__item {
@@ -85,7 +93,7 @@ figcaption {
   margin-left: 0;
 }
 
-#slide1:checked~.slider__controls label[for="slide1"] {
+#slide1:checked ~ .slider__controls label[for="slide1"] {
   box-shadow: 0 10px 20px -5px rgba(255, 255, 255, 0.75);
   color: whitesmoke;
   background-color: whitesmoke;
